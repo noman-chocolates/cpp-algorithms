@@ -1,7 +1,10 @@
 long long factorial(int num){
 	long long fact = num;
-	for(int i=num-1; i>1; i--){
-		fact *= i;
+	if(num==0) return 1;
+	else {
+		for(int i=num-1; i>1; i--){
+			fact *= i;
+		}
+		return fact;
 	}
-	return fact;
 }
