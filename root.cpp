@@ -22,10 +22,12 @@ long long factorial(int num){
 long double root(double base, double exponent){
 	long double x = base -1;
 	long double n = 1/exponent;
+	long double r = n-1;
 	long double out = 1;
 	for(int i=1; i<20; i++){
 		out += n*power(x, i)/factorial(i);
-		n *= n-1;
+		n *= r;
+		r--;
 	}
 	return out;
 }
